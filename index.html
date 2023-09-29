@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Music Player</title>
+</head>
+<body>
+<div class="player">
+    <div class="wrapper">
+        <div class="details">
+            <div class="now-playing">play x of y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+        </div>
+        <div class="slider-container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="0" max="100" value="99" class="seek-slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+        <div class="slider-container">
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range" min="0" max="100" value="99" class="volume-slider" onchange="setVolume()">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div class="control-buttons">
+            <div class="random-track" onclick="randomTrack()">
+                <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div class="prev-track" onclick="prevTrack()">
+                <i class="fa-solid fa-backward-step"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div class="repeat-track" onclick="repeatTrack()">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+        </div>
+
+        <div id="wave">
+            <span class="strock"></span>
+            <span class="strock"></span>
+            <span class="strock"></span>
+            <span class="strock"></span>
+            <span class="strock"></span>
+            <span class="strock"></span>
+            <span class="strock"></span>
+        </div>
+    </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
